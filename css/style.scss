@@ -1,0 +1,283 @@
+@import "fonts";
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
+@import "../node_modules/bootstrap/scss/functions";
+
+// Переопределения переменных по умолчанию
+$grid-breakpoints: (
+        xs: 0,
+        md: 480px,
+        xl: 780px,
+);
+
+$container-max-widths: (
+        xl: 1350px,
+);
+
+$container-padding-x: 6.25rem;
+
+//Цвета
+$nc-color-fantasy: #FAF5F1;
+$nc-color-citrine: #F8E9CF;
+$nc-color-linen: #FCF5EA;
+$nc-color-lavender: #FFEBF2;
+$nc-color-ribbon: #E40527;
+$nc-color-temptress: #4B0000;
+
+$body-bg: #FFF;
+$body-color: #000;
+$link-color: $nc-color-ribbon;
+$link-hover-color: shade-color($nc-color-ribbon, 15%);
+$border-color: #A2A2A2;
+//$component-active-bg: $nc-color-middle;
+//$highlight-color:  #FDC63B;
+
+//Контент
+$font-family-sans-serif: "Formular", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-size-base: 1rem; //16px
+$font-weight-base: 400;
+$line-height-base: 1.4;
+$enable-rfs: false; //адаптивный размер шрифтов
+$headings-color: $nc-color-temptress;
+$headings-font-weight: 700;
+$h1-font-size: 2.8125rem;        //45px
+$h2-font-size: 2.1875rem;        //35px
+$h3-font-size: 1.375rem;         //22px
+$h4-font-size: 1.25rem;          //20px
+$h5-font-size: 1rem;
+
+//Dropdown
+$dropdown-border-radius: 0;
+$dropdown-bg: #fff;
+$dropdown-border-width: 0;
+$dropdown-item-padding-y: 0.625rem;
+$dropdown-item-padding-x: 0.625rem;
+
+//Поля и кнопки
+$input-btn-padding-y: 0.875rem;
+//$input-btn-line-height: 1.25;
+$input-btn-font-size: 0.875rem;
+$input-btn-padding-x: 0.875rem;
+
+$btn-padding-y: 0;
+$btn-padding-x: 1.5625rem;
+$btn-border-radius: 22px;
+$btn-font-weight: 400;
+$btn-box-shadow: none !important;
+$btn-focus-box-shadow: none !important;
+$btn-active-box-shadow: none !important;
+
+$btn-close-width:            1.5rem;
+$btn-close-height:           1.5rem;
+$btn-close-color:            transparent;
+$btn-close-bg:               url('../images/close.svg');
+$btn-close-focus-shadow:     none;
+
+$input-bg: transparent;
+//$input-padding-x: 0;
+$input-border-color: $nc-color-lavender;
+$input-font-weight: 400;
+$input-placeholder-color: #000;
+$input-border-radius: 28px;
+$input-focus-bg: transparent;
+$input-focus-border-color: shade-color($input-border-color, 50%);
+$input-box-shadow: none !important;
+$input-focus-box-shadow: none !important;
+$input-active-box-shadow: none !important;
+
+$form-label-color:  #232323;
+
+$form-floating-padding-x: 0;
+$form-floating-height: add(3rem, 1px);
+$form-floating-label-transform: scale(.85) translateY(-.7rem);
+$form-floating-label-opacity: 0.4;
+
+//Чекбоксы
+//$form-check-input-focus-box-shadow: none !important;
+//$form-check-input-width: 1.43em;
+//$form-check-min-height: 1.43em;
+//$form-check-input-border: 1px solid #959595;
+//$form-check-input-border-radius: 0;
+//$form-check-input-checked-bg-color: $nc-color-dark;
+//$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'><circle r='2' fill='#{$nc-color-dark}'/></svg>") !default;
+//$form-check-padding-start: 2.125rem;
+/*$form-check-input-checked-bg-image: url(../images/check.svg);
+$form-check-input-bg: transparent;
+$form-check-label-color: #6D6D6D;
+$form-check-input-checked-color: #222222;*/
+//$form-check-inline-margin-end: 2rem;
+
+//Селекты
+$form-select-box-shadow: none !important;
+$form-select-focus-box-shadow: none !important;
+$form-select-active-box-shadow: none !important;
+$form-select-focus-border-color: $input-border-color;
+
+$offcanvas-horizontal-width: 280px;
+$offcanvas-bg-color: $nc-color-fantasy;
+$offcanvas-padding-y: 10px;
+$offcanvas-padding-x: 10px;
+
+//Карусель
+/*$carousel-control-width: 60px;
+$carousel-control-icon-width: 60px;
+//$carousel-control-prev-icon-bg: url(../images/arrowleft.svg);
+//$carousel-control-next-icon-bg: url(../images/arrowright.svg);
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: .8;
+$carousel-transition-duration: 0.6s;*/
+
+//Аккордион
+/*
+$accordion-button-padding-y:  28px;
+$accordion-button-padding-x:  45px;
+$accordion-icon-width: 26px;
+$accordion-button-icon: url(../images/arrow_down.svg);
+$accordion-button-active-icon: url(../images/arrow_down.svg);
+$accordion-button-active-bg: $nc-color-indigo;
+$accordion-button-active-color: #fff;
+$accordion-body-padding-x: 45px;
+$accordion-body-padding-y: 45px;
+*/
+
+//Модальное окно
+$modal-xl: 600px;
+$modal-md: 100%;
+$modal-header-padding-x: 0;
+$modal-content-border-radius: 0;
+$modal-content-inner-border-radius: 0;
+$modal-header-padding-y: 1.625rem;
+$modal-inner-padding: 1.25rem;
+$modal-content-border-width: 0;
+$modal-header-border-width: 1px;
+$modal-footer-border-width: 1px;
+//$modal-content-bg: #F5F5F5;
+//$modal-backdrop-bg: #1b1b1b;
+//$modal-backdrop-opacity: 0.7;
+//$modal-dialog-margin-y-sm-up: 3.5rem;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+
+//Добавление своих цветов в карту
+$custom-colors: (
+        "nc-fantasy": $nc-color-fantasy,
+        "nc-citrine": $nc-color-citrine,
+        "nc-lavender": $nc-color-lavender,
+        'nc-ribbon': $nc-color-ribbon,
+        'nc-temptress': $nc-color-temptress
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$input-group-addon-bg: $input-bg;
+
+$spacers: (
+        0: 0,
+        1: $spacer * .25,       //4px
+        2: $spacer * .5,        //8px *
+        3: $spacer,             //16px *
+        4: $spacer * 1.5,       //24px
+        5: $spacer * 2.75,      //44px *
+        6: $spacer * 0.625,     //12px *
+        7: $spacer * 1.25,      //20px *
+        8: $spacer * 3.25,      //52px *
+        9: $spacer * 3,         //48px *
+        10: $spacer * 2.25,     //36px *
+        11: $spacer * 3.75,     //60px *
+        12: $spacer * 2,        //32px *
+        13: $spacer * 2.5,      //40px *
+        14: $spacer * 11.25,    //180px
+        15: $spacer * 6.25,     //100px
+
+);
+
+$font-sizes: (
+        1: $h1-font-size,       //45px
+        2: $h2-font-size,       //35px
+        3: $h3-font-size,       //22px
+        4: $h4-font-size,       //20px
+        5: $h5-font-size,       //16px
+        6: $h6-font-size,       //14px
+        7: 1.125rem,            //18px
+        //8: 0.75rem              //12px
+);
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+//@import "utilities";
+//@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+//@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+//@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+//@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+//@import "../node_modules/bootstrap/scss/navbar";
+//@import "../node_modules/bootstrap/scss/card";
+//@import "../node_modules/bootstrap/scss/accordion";
+//@import "../node_modules/bootstrap/scss/breadcrumb";
+//@import "../node_modules/bootstrap/scss/pagination";
+//@import "../node_modules/bootstrap/scss/badge";
+//@import "../node_modules/bootstrap/scss/alert";
+//@import "../node_modules/bootstrap/scss/progress";
+//@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+//@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+//@import "../node_modules/bootstrap/scss/popover";
+//@import "../node_modules/bootstrap/scss/carousel";
+//@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+//@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 5. Добавьте сюда дополнительный пользовательский код
+//Собственные переменные
+//$min-window-width: 780px;
+$control-height-1: 56px;
+//$control-height-2: 73px;
+//$control-height-3: 67px;
+
+/*$wide-wrapper-width: 1416px;
+$control-height-1: 57px;
+$control-height-2: 65px;
+$control-height-3: 80px;
+$carousel-control-height: 40px;
+$round-button-right: -81px;
+$min-window-width: map-get($container-max-widths, xl) - $round-button-right*2;
+$text-close-color: #99A5B0;*/
+
+@import "common";
+@import "header";
+@import "footer";
+@import "main";
+//@import "modules/page-top";
+//@import "modules/brands-menu";
+//@import "modules/populas-slider";
+//@import "modules/rent-steps";
+//@import "modules/forms";
+//@import "modules/faq";
+//@import "modules/catalog";
+//@import "modules/detail";
+//@import "modules/one-side-block";
+//@import "modules/basket";
+//@import "modules/order";
+//@import "modules/rent-selector";
+//@import "modules/personal";
+//@import "modules/footer";
+//@import "modules/modals";

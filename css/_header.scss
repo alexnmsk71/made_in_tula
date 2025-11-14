@@ -1,0 +1,121 @@
+.header {
+    border-bottom: 2px solid $nc-color-fantasy;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    z-index: 1100;
+
+    &::before, &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 131px;
+        top: 0;
+        background: transparent url(../images/header_bg.svg) no-repeat center / contain;
+        z-index: -1;
+    }
+    &::before {
+        left: calc(50% - 900px)
+    }
+    &::after {
+        right: calc(50% - 900px)
+    }
+
+    .btn {
+        border-radius: 28px;
+    }
+}
+
+.header-menu {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    a {
+        color: #000;
+    }
+
+    &__drop {
+        height: 56px;
+        width: 56px;
+        min-width: 56px;
+        border: $nc-color-lavender 2px solid;
+        border-radius: 50%;
+        cursor: pointer;
+        background: transparent url(../images/menu.svg) no-repeat center;
+        transition: 0.5s;
+
+        &.opened {
+            background-image: url(../images/close.svg);
+        }
+    }
+
+    &__search {
+        max-width: 302px;
+        border: $nc-color-lavender 2px solid;
+        border-radius: 28px;
+        overflow: hidden;
+
+        input {
+            height: 56px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border: none !important;
+        }
+
+        .btn {
+            border: none !important;
+            background: transparent url(../images/search.svg) no-repeat center;
+        }
+
+    }
+
+    &__links {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 0 15px;
+            height: 56px;
+            border-radius: 28px;
+            transition: 0.3s;
+
+            &:hover {
+                background: $nc-color-linen;
+            }
+        }
+    }
+
+    &__store {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 56px;
+        border-radius: 28px;
+        padding: 10px 15px 10px 4px;
+        text-decoration: none;
+        background: $nc-color-fantasy;
+        transition: 0.3s;
+
+        &::before {
+            display: inline-block;
+            content: "";
+            width: 48px;
+            height: 48px;
+            background: transparent url(../images/store_logo.svg) no-repeat left / contain;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: $nc-color-ribbon;
+        }
+    }
+}
