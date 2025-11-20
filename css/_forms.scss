@@ -1,0 +1,123 @@
+.field-set {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    padding: 15px;
+    height: 100%;
+}
+
+label {
+    font-size: 0.875rem;
+}
+
+.error-message {
+    color: $nc-color-ribbon;
+    font-size: 13px;
+    padding: 5px 20px;
+}
+
+.form-control {
+    &.invalid {
+        border-color: $nc-color-ribbon;
+    }
+}
+
+.form-check {
+    .error-message {
+        padding: 0;
+    }
+}
+
+.form-agreements {
+    padding-top: 10px;
+
+    .form-check-label {
+        color: rgba(0, 0, 0, 0.5);
+        line-height: 1.2;
+    }
+}
+
+.request-form {
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+
+        .btn {
+            min-width: 200px;
+            font-size: 18px;
+        }
+
+        .btn-nc-ribbon {
+            min-width: 325px;
+        }
+    }
+
+}
+
+.file-loader {
+    &__container {
+        height: 88px;
+        border: 1px dashed $nc-color-ribbon;
+        border-radius: 13px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: transparent;
+        padding: 20px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &.dragover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    .btn {
+        min-width: 162px;
+        height: 45px;
+    }
+
+    &__description {
+        color: rgba(0, 0, 0, 0.5);
+        margin: 0;
+        font-size: 12px;
+
+        strong {
+            color: #000;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 400;
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__info {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #6c757d;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

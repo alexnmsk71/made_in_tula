@@ -10,10 +10,10 @@ $grid-breakpoints: (
 );
 
 $container-max-widths: (
-        xl: 1350px,
+        xl: 1406px,
 );
 
-$container-padding-x: 6.25rem;
+$container-padding-x: 9.75rem;
 
 //Цвета
 $nc-color-fantasy: #FAF5F1;
@@ -25,6 +25,7 @@ $nc-color-temptress: #4B0000;
 
 $body-bg: #FFF;
 $body-color: #000;
+$body-secondary-color: rgba($body-color, .54);
 $link-color: $nc-color-ribbon;
 $link-hover-color: shade-color($nc-color-ribbon, 15%);
 $border-color: #A2A2A2;
@@ -33,24 +34,39 @@ $border-color: #A2A2A2;
 
 //Контент
 $font-family-sans-serif: "Formular", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-size-base: 1rem; //16px
+$font-size-base: 1rem;
+//16px
 $font-weight-base: 400;
 $line-height-base: 1.4;
-$enable-rfs: false; //адаптивный размер шрифтов
+$enable-rfs: false;
+//адаптивный размер шрифтов
+$headings-margin-bottom: 1.5625rem;
+//25px
 $headings-color: $nc-color-temptress;
 $headings-font-weight: 700;
-$h1-font-size: 2.8125rem;        //45px
-$h2-font-size: 2.1875rem;        //35px
-$h3-font-size: 1.375rem;         //22px
-$h4-font-size: 1.25rem;          //20px
+$h1-font-size: 2.8125rem;
+//45px
+$h2-font-size: 2.1875rem;
+//35px
+$h3-font-size: 1.375rem;
+//22px
+$h4-font-size: 1.25rem;
+//20px
 $h5-font-size: 1rem;
+$h6-font-size: 0.875rem;
 
 //Dropdown
-$dropdown-border-radius: 0;
-$dropdown-bg: #fff;
+$dropdown-border-radius: 25px;
+$dropdown-bg: $nc-color-fantasy;
 $dropdown-border-width: 0;
 $dropdown-item-padding-y: 0.625rem;
-$dropdown-item-padding-x: 0.625rem;
+$dropdown-item-padding-x: 1.25rem;
+$dropdown-font-size: $h6-font-size;
+$dropdown-link-color: rgba(0, 0, 0, 0.45);
+$dropdown-link-hover-bg: #fff;
+$dropdown-link-active-bg: #fff;
+$dropdown-link-active-color: #000;
+$dropdown-link-disabled-color: $nc-color-ribbon;
 
 //Поля и кнопки
 $input-btn-padding-y: 0.875rem;
@@ -66,25 +82,27 @@ $btn-box-shadow: none !important;
 $btn-focus-box-shadow: none !important;
 $btn-active-box-shadow: none !important;
 
-$btn-close-width:            1.5rem;
-$btn-close-height:           1.5rem;
-$btn-close-color:            transparent;
-$btn-close-bg:               url('../images/close.svg');
-$btn-close-focus-shadow:     none;
+$btn-close-width: 1rem;
+$btn-close-height: 1rem;
+$btn-close-padding-x: 1.8125rem;
+$btn-close-padding-y: $btn-close-padding-x;
+$btn-close-color: transparent;
+$btn-close-bg: url('../images/close.svg');
+$btn-close-focus-shadow: none;
 
-$input-bg: transparent;
+$input-bg: #fff;
 //$input-padding-x: 0;
-$input-border-color: $nc-color-lavender;
+$input-border-color: #fff;
 $input-font-weight: 400;
 $input-placeholder-color: #000;
-$input-border-radius: 28px;
-$input-focus-bg: transparent;
-$input-focus-border-color: shade-color($input-border-color, 50%);
+$input-border-radius: 20px;
+$input-focus-bg: #fff;
+$input-focus-border-color: shade-color($input-border-color, 20%);
 $input-box-shadow: none !important;
 $input-focus-box-shadow: none !important;
 $input-active-box-shadow: none !important;
 
-$form-label-color:  #232323;
+$form-label-color: rgba(0,0,0,0.5);
 
 $form-floating-padding-x: 0;
 $form-floating-height: add(3rem, 1px);
@@ -92,16 +110,21 @@ $form-floating-label-transform: scale(.85) translateY(-.7rem);
 $form-floating-label-opacity: 0.4;
 
 //Чекбоксы
-//$form-check-input-focus-box-shadow: none !important;
-//$form-check-input-width: 1.43em;
-//$form-check-min-height: 1.43em;
-//$form-check-input-border: 1px solid #959595;
-//$form-check-input-border-radius: 0;
-//$form-check-input-checked-bg-color: $nc-color-dark;
+$form-check-margin-bottom: 1.125rem;
+$form-check-input-focus-box-shadow: none !important;
+$form-check-input-width: 1.6875em;
+$form-check-min-height: 1.6875em;
+$form-check-input-border: 0;
+$form-check-input-border-radius: 7px;
+$form-check-input-checked-color: rgba(0,0,0,0.5);
+$form-check-input-indeterminate-bg-color: #fff;
+$form-check-input-bg: #fff;
+$form-check-input-checked-bg-color: #fff;
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
 //$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'><circle r='2' fill='#{$nc-color-dark}'/></svg>") !default;
 //$form-check-padding-start: 2.125rem;
 /*$form-check-input-checked-bg-image: url(../images/check.svg);
-$form-check-input-bg: transparent;
+
 $form-check-label-color: #6D6D6D;
 $form-check-input-checked-color: #222222;*/
 //$form-check-inline-margin-end: 2rem;
@@ -139,17 +162,30 @@ $accordion-body-padding-x: 45px;
 $accordion-body-padding-y: 45px;
 */
 
+//Табы
+$nav-pills-border-radius:           25px;
+$nav-pills-link-active-color:       #000;
+$nav-pills-link-active-bg:          transparent;
+
 //Модальное окно
-$modal-xl: 600px;
-$modal-md: 100%;
-$modal-header-padding-x: 0;
-$modal-content-border-radius: 0;
-$modal-content-inner-border-radius: 0;
-$modal-header-padding-y: 1.625rem;
-$modal-inner-padding: 1.25rem;
-$modal-content-border-width: 0;
-$modal-header-border-width: 1px;
-$modal-footer-border-width: 1px;
+$modal-md: 878px;
+$modal-header-border-width:         0;
+$modal-header-padding-y:            2.5rem;
+$modal-header-padding-x:            3.125rem;
+$modal-content-bg:                  $nc-color-citrine;
+$modal-content-border-width:        0;
+$modal-content-border-radius:       65px;
+$modal-inner-padding:               3.125rem;
+$zindex-modal:                      1200;
+//$modal-md: 100%;
+//$modal-header-padding-x: 0;
+//$modal-content-border-radius: 0;
+//$modal-content-inner-border-radius: 0;
+//$modal-header-padding-y: 1.625rem;
+//$modal-inner-padding: 1.25rem;
+//$modal-content-border-width: 0;
+//$modal-header-border-width: 1px;
+//$modal-footer-border-width: 1px;
 //$modal-content-bg: #F5F5F5;
 //$modal-backdrop-bg: #1b1b1b;
 //$modal-backdrop-opacity: 0.7;
@@ -171,33 +207,32 @@ $input-group-addon-bg: $input-bg;
 
 $spacers: (
         0: 0,
-        1: $spacer * .25,       //4px
-        2: $spacer * .5,        //8px *
-        3: $spacer,             //16px *
-        4: $spacer * 1.5,       //24px
-        5: $spacer * 2.75,      //44px *
-        6: $spacer * 0.625,     //12px *
-        7: $spacer * 1.25,      //20px *
-        8: $spacer * 3.25,      //52px *
-        9: $spacer * 3,         //48px *
-        10: $spacer * 2.25,     //36px *
-        11: $spacer * 3.75,     //60px *
-        12: $spacer * 2,        //32px *
-        13: $spacer * 2.5,      //40px *
-        14: $spacer * 11.25,    //180px
-        15: $spacer * 6.25,     //100px
-
+        1: $spacer * .25, //4px
+        2: $spacer * .5, //8px *
+        3: $spacer, //16px *
+        4: $spacer * 1.75, //28px *
+        5: $spacer * 2.75, //44px *
+        6: $spacer * 0.625, //12px *
+        7: $spacer * 1.25, //20px *
+        8: $spacer * 3.25, //52px *
+        9: $spacer * 3, //48px *
+        10: $spacer * 2.25, //36px *
+        11: $spacer * 3.75, //60px *
+        12: $spacer * 2, //32px *
+        13: $spacer * 2.5, //40px *
+        14: $spacer * 5.625, //90px *
+        15: $spacer * 7.5, //120px *
 );
 
 $font-sizes: (
-        1: $h1-font-size,       //45px
-        2: $h2-font-size,       //35px
-        3: $h3-font-size,       //22px
-        4: $h4-font-size,       //20px
-        5: $h5-font-size,       //16px
-        6: $h6-font-size,       //14px
-        7: 1.125rem,            //18px
-        //8: 0.75rem              //12px
+        1: $h1-font-size, //45px
+        2: $h2-font-size, //35px
+        3: $h3-font-size, //22px
+        4: $h4-font-size, //20px
+        5: $h5-font-size, //16px
+        6: $h6-font-size, //14px
+        7: 1.125rem, //18px
+    //8: 0.75rem              //12px
 );
 
 // 5. Include remainder of required parts
@@ -266,18 +301,8 @@ $text-close-color: #99A5B0;*/
 @import "header";
 @import "footer";
 @import "main";
-//@import "modules/page-top";
-//@import "modules/brands-menu";
-//@import "modules/populas-slider";
-//@import "modules/rent-steps";
-//@import "modules/forms";
-//@import "modules/faq";
-//@import "modules/catalog";
-//@import "modules/detail";
-//@import "modules/one-side-block";
-//@import "modules/basket";
-//@import "modules/order";
-//@import "modules/rent-selector";
-//@import "modules/personal";
-//@import "modules/footer";
-//@import "modules/modals";
+@import "catalog";
+@import "reviews";
+@import "news";
+@import "modal";
+@import "forms";

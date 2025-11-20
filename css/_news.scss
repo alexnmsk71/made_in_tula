@@ -1,0 +1,103 @@
+.news-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__image {
+        width: 100%;
+        height: 170px;
+        border-radius: 30px;
+        background: transparent no-repeat center / cover;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            opacity: 0;
+            transition: 0.3s;
+        }
+    }
+
+    &:hover &__image::after {
+        opacity: 0.25;
+    }
+
+    &__title {
+        flex-grow: 1;
+        font-size: 20px;
+        padding: 7px 0;
+        line-height: 1.1;
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    &__date {
+        color: #000;
+        opacity: 0.5;
+    }
+}
+
+.news-detail {
+    &__img {
+        aspect-ratio: 940 / 537;
+        border-radius: 35px;
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        img {
+            max-width: 100%;
+            margin: 25px 0;
+            border-radius: 35px;
+        }
+    }
+}
+
+.news-feed {
+    padding-left: 25px;
+    border-left: 1px solid rgba(162, 162, 162, 0.4);
+
+    &__item {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(162, 162, 162, 0.4);
+        position: relative;
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__name {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+            color: $nc-color-ribbon;
+        }
+    }
+
+    &__category {
+        font-size: 14px;
+        color: rgba(0,0,0,0.5);
+    }
+
+    &__img {
+        border-radius: 25px;
+        aspect-ratio: 265 / 151;
+        margin-bottom: 5px;
+    }
+}
