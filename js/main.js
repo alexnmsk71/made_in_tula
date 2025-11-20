@@ -267,4 +267,18 @@ window.addEventListener("DOMContentLoaded", function () {
         form.validator = new $$.validator(form);
     });
 
+    Fancybox.bind("[data-fancybox]", {
+        // Настройки Fancybox (опционально)
+        Thumbs: {
+            autoStart: true,
+        },
+        Toolbar: {
+            display: {
+                left: [],
+                middle: [],
+                right: ["close"],
+            },
+        },
+    });
+
 });
