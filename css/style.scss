@@ -82,10 +82,10 @@ $btn-box-shadow: none !important;
 $btn-focus-box-shadow: none !important;
 $btn-active-box-shadow: none !important;
 
-$btn-close-width: 1rem;
-$btn-close-height: 1rem;
-$btn-close-padding-x: 1.8125rem;
-$btn-close-padding-y: $btn-close-padding-x;
+$btn-close-width: 2.8125rem;
+$btn-close-height: 2.8125rem;
+$btn-close-padding-x: 0;
+$btn-close-padding-y: 0;
 $btn-close-color: transparent;
 $btn-close-bg: url('../images/close.svg');
 $btn-close-focus-shadow: none;

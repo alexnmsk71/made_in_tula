@@ -114,21 +114,21 @@ $$.fileLoader = function (el) {
 
         // Проверка типа файла
         if (file.type !== 'application/pdf') {
-            fileInfo.innerHTML = '<span class="text-danger">Ошибка: Можно загружать только PDF файлы</span>';
+            fileInfo.innerHTML = '<div class="text-danger mt-2">Ошибка: Можно загружать только PDF файлы</div>';
             return;
         }
 
         // Проверка размера файла (1 МБ = 1048576 байт)
         if (file.size > 1048576) {
-            fileInfo.innerHTML = '<span class="text-danger">Ошибка: Размер файла превышает 1 МБ</span>';
+            fileInfo.innerHTML = '<div class="text-danger mt-2">Ошибка: Размер файла превышает 1 МБ</div>';
             return;
         }
 
         // Отображение информации о файле
         const fileSize = (file.size / 1024 / 1024).toFixed(2);
         fileInfo.innerHTML = `
-                <span class="text-success">✓ Файл выбран:</span> ${file.name}<br>
-                <small>Размер: ${fileSize} МБ</small>
+                <div class="mt-2"><span class="text-success">✓ Файл выбран:</span> ${file.name}<br>
+                <small>Размер: ${fileSize} МБ</small></div>
             `;
     }
 };

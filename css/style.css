@@ -3541,11 +3541,11 @@ textarea.form-control-lg {
   --bs-btn-close-focus-opacity: 1;
   --bs-btn-close-disabled-opacity: 0.25;
   box-sizing: content-box;
-  width: 1rem;
-  height: 1rem;
-  padding: 1.8125rem 1.8125rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  padding: 0 0;
   color: var(--bs-btn-close-color);
-  background: transparent var(--bs-btn-close-bg) center/1rem auto no-repeat;
+  background: transparent var(--bs-btn-close-bg) center/2.8125rem auto no-repeat;
   filter: var(--bs-btn-close-filter);
   border: 0;
   border-radius: 0.375rem;
@@ -11422,11 +11422,15 @@ a.store:hover {
   z-index: 1190;
 }
 
+.btn-close {
+  background: #FAEFDB url("../images/close.svg") no-repeat center/auto;
+  padding: 0 !important;
+}
+
 .field-set {
   background: rgba(255, 255, 255, 0.25);
   border-radius: 25px;
   padding: 15px;
-  height: 100%;
 }
 
 label {
@@ -11474,7 +11478,6 @@ label {
   display: flex;
   gap: 15px;
   align-items: center;
-  cursor: pointer;
   transition: all 0.3s ease;
   background-color: transparent;
   padding: 20px;
@@ -11505,7 +11508,6 @@ label {
   display: none;
 }
 .file-loader__info {
-  margin-top: 10px;
   font-size: 14px;
   color: #6c757d;
 }
