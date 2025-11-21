@@ -11167,15 +11167,10 @@ a.store:hover {
 }
 
 .brand-card {
+  position: relative;
   display: block;
-  text-decoration: none !important;
-  color: #000;
-  transition: 0.3s;
 }
-.brand-card:hover {
-  color: #E40527;
-}
-.brand-card__img {
+.brand-card__image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11184,16 +11179,38 @@ a.store:hover {
   border-radius: 35px;
   padding: 35px;
   aspect-ratio: 300/197;
+  overflow: hidden;
 }
-.brand-card__img img {
+.brand-card__image::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+.brand-card__image img {
   max-width: 100%;
   max-height: 100%;
 }
 .brand-card__title {
+  display: block;
+  text-decoration: none !important;
+  color: #000;
   margin-top: 10px;
   font-size: 18px;
   line-height: 1.2;
   padding: 0 15px;
+}
+.brand-card:hover .brand-card__title {
+  color: #E40527 !important;
+}
+.brand-card:hover .brand-card__image::after {
+  opacity: 0.25;
 }
 
 .categories-list a {
@@ -11348,10 +11365,8 @@ a.store:hover {
   opacity: 0;
   transition: 0.3s;
 }
-.news-card:hover .news-card__image::after {
-  opacity: 0.25;
-}
 .news-card__title {
+  display: block;
   flex-grow: 1;
   font-size: 20px;
   padding: 7px 0;
@@ -11362,6 +11377,12 @@ a.store:hover {
 .news-card__date {
   color: #000;
   opacity: 0.5;
+}
+.news-card:hover .news-card__title {
+  color: #E40527 !important;
+}
+.news-card:hover .news-card__image::after {
+  opacity: 0.25;
 }
 
 .news-detail__img {

@@ -26,11 +26,8 @@
         }
     }
 
-    &:hover &__image::after {
-        opacity: 0.25;
-    }
-
     &__title {
+        display: block;
         flex-grow: 1;
         font-size: 20px;
         padding: 7px 0;
@@ -42,6 +39,13 @@
     &__date {
         color: #000;
         opacity: 0.5;
+    }
+
+    &:hover &__title {
+        color: $nc-color-ribbon !important;
+    }
+    &:hover &__image::after {
+        opacity: 0.25;
     }
 }
 

@@ -25,16 +25,10 @@
 }
 
 .brand-card {
+    position: relative;
     display: block;
-    text-decoration: none !important;
-    color: #000;
-    transition: 0.3s;
 
-    &:hover {
-        color: $nc-color-ribbon;
-    }
-
-    &__img {
+    &__image{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,6 +37,20 @@
         border-radius: 35px;
         padding: 35px;
         aspect-ratio: 300 / 197;
+        overflow: hidden;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            opacity: 0;
+            transition: 0.3s;
+        }
 
         img {
             max-width: 100%;
@@ -51,10 +59,20 @@
     }
 
     &__title {
+        display: block;
+        text-decoration: none !important;
+        color: #000;
         margin-top: 10px;
         font-size: 18px;
         line-height: 1.2;
         padding: 0 15px;
+    }
+
+    &:hover &__title {
+        color: $nc-color-ribbon !important;
+    }
+    &:hover &__image::after {
+        opacity: 0.25;
     }
 }
 
