@@ -233,7 +233,7 @@
     }
 }
 
-@media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: map-get($grid-breakpoints, xl)) {
     .category-card {
         border-radius: 28px;
         padding: 15px 3px;
@@ -309,7 +309,7 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md) + 1) {
+@media (min-width: map-get($grid-breakpoints, xl) + 1) {
     .categories-dropdown {
         [data-bs-toggle="dropdown"] {
             display: none;

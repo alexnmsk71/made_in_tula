@@ -120,7 +120,7 @@
 
 }
 
-@media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: map-get($grid-breakpoints, xl)) {
     .header {
         overflow: visible;
 

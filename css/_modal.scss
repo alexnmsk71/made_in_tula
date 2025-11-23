@@ -15,7 +15,7 @@
     padding: 0 !important;
 }
 
-@media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: map-get($grid-breakpoints, xl)) {
     .modal {
         --bs-modal-border-radius: 35px;
         --bs-modal-padding: 20px;

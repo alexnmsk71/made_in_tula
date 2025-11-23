@@ -1,4 +1,6 @@
 body {
+    --container-min-width: #{map-get($container-min-widths, xl)};
+
     &::before {
         content: '';
         position: fixed;
@@ -25,6 +27,12 @@ body {
             visibility: visible;
         }
     }
+
+    min-width: var(--container-min-width);
+}
+
+.container {
+    min-width: var(--container-min-width);
 }
 
 a {
@@ -459,7 +467,10 @@ a {
 }
 
 
-@media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: map-get($grid-breakpoints, xl)) {
+    body {
+        --container-min-width: #{map-get($container-min-widths, xs)};
+    }
     .container {
         --bs-gutter-x: 2.5rem;
     }

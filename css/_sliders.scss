@@ -8,14 +8,13 @@
     $m-slide-gap: 20px;
 
     width: ($m-slide-width + $m-slide-gap)*3;
-    transform: translateX(calc(-50% + 50vw - 8px));
+    transform: translateX(calc(-50% + max(50vw, #{map-get($container-min-widths, xl)/2}) - 8px));
 
     &__item {
         border-radius: 75px;
         overflow: hidden;
         height: 650px;
         width: 100%;
-        max-width: calc(100vw - 20px);
         background: transparent no-repeat center / cover;
         display: flex;
         flex-direction: column;
@@ -80,7 +79,7 @@
     $p-slide-gap: 10px;
 
     width: ($p-slide-width + $p-slide-gap)*3;
-    transform: translateX(calc(-50% + 50vw - 5px));
+    transform: translateX(calc(-50% + max(50vw, #{map-get($container-min-widths, xl)/2}) - 5px));
 
     &__item {
         height: 491px;
@@ -95,7 +94,7 @@
     $r-slide-gap: 15px;
 
     width: ($r-slide-width + $r-slide-gap)*3;
-    transform: translateX(calc(-50% + 50vw - 8px));
+    transform: translateX(calc(-50% + max(50vw, #{map-get($container-min-widths, xl)/2}) - 8px));
 
     .review {
         height: 517px;
@@ -150,7 +149,7 @@
     }
 }
 
-@media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: map-get($grid-breakpoints, xl)) {
 
     .sec-main-slider {
         margin-top: -20px;

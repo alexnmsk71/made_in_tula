@@ -113,7 +113,7 @@ label {
     }
 }
 
-@media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: map-get($grid-breakpoints, xl)) {
     .request-form {
 
         &__buttons {

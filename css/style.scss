@@ -5,11 +5,16 @@
 // Переопределения переменных по умолчанию
 $grid-breakpoints: (
         xs: 0,
-        md: 480px,
-        xl: 780px,
+        xl: 480px,
 );
 
 $container-max-widths: (
+        xs: 480px,
+        xl: 1406px,
+);
+
+$container-min-widths: (
+        xs: 0,
         xl: 1406px,
 );
 
@@ -29,8 +34,6 @@ $body-secondary-color: rgba($body-color, .54);
 $link-color: $nc-color-ribbon;
 $link-hover-color: shade-color($nc-color-ribbon, 15%);
 $border-color: #A2A2A2;
-//$component-active-bg: $nc-color-middle;
-//$highlight-color:  #FDC63B;
 
 //Контент
 $font-family-sans-serif: "Formular", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -121,13 +124,6 @@ $form-check-input-indeterminate-bg-color: #fff;
 $form-check-input-bg: #fff;
 $form-check-input-checked-bg-color: #fff;
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
-//$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'><circle r='2' fill='#{$nc-color-dark}'/></svg>") !default;
-//$form-check-padding-start: 2.125rem;
-/*$form-check-input-checked-bg-image: url(../images/check.svg);
-
-$form-check-label-color: #6D6D6D;
-$form-check-input-checked-color: #222222;*/
-//$form-check-inline-margin-end: 2rem;
 
 //Селекты
 $form-select-box-shadow: none !important;
@@ -135,32 +131,11 @@ $form-select-focus-box-shadow: none !important;
 $form-select-active-box-shadow: none !important;
 $form-select-focus-border-color: $input-border-color;
 
+//Offcanvas
 $offcanvas-horizontal-width: 280px;
 $offcanvas-bg-color: $nc-color-fantasy;
 $offcanvas-padding-y: 10px;
 $offcanvas-padding-x: 10px;
-
-//Карусель
-/*$carousel-control-width: 60px;
-$carousel-control-icon-width: 60px;
-//$carousel-control-prev-icon-bg: url(../images/arrowleft.svg);
-//$carousel-control-next-icon-bg: url(../images/arrowright.svg);
-$carousel-control-opacity: 1;
-$carousel-control-hover-opacity: .8;
-$carousel-transition-duration: 0.6s;*/
-
-//Аккордион
-/*
-$accordion-button-padding-y:  28px;
-$accordion-button-padding-x:  45px;
-$accordion-icon-width: 26px;
-$accordion-button-icon: url(../images/arrow_down.svg);
-$accordion-button-active-icon: url(../images/arrow_down.svg);
-$accordion-button-active-bg: $nc-color-indigo;
-$accordion-button-active-color: #fff;
-$accordion-body-padding-x: 45px;
-$accordion-body-padding-y: 45px;
-*/
 
 //Табы
 $nav-pills-border-radius:           25px;
@@ -177,19 +152,7 @@ $modal-content-border-width:        0;
 $modal-content-border-radius:       65px;
 $modal-inner-padding:               3.125rem;
 $zindex-modal:                      1200;
-//$modal-md: 100%;
-//$modal-header-padding-x: 0;
-//$modal-content-border-radius: 0;
-//$modal-content-inner-border-radius: 0;
-//$modal-header-padding-y: 1.625rem;
-//$modal-inner-padding: 1.25rem;
-//$modal-content-border-width: 0;
-//$modal-header-border-width: 1px;
-//$modal-footer-border-width: 1px;
-//$modal-content-bg: #F5F5F5;
-//$modal-backdrop-bg: #1b1b1b;
-//$modal-backdrop-opacity: 0.7;
-//$modal-dialog-margin-y-sm-up: 3.5rem;
+
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -268,7 +231,7 @@ $font-sizes: (
 @import "../node_modules/bootstrap/scss/close";
 //@import "../node_modules/bootstrap/scss/toasts";
 @import "../node_modules/bootstrap/scss/modal";
-@import "../node_modules/bootstrap/scss/tooltip";
+//@import "../node_modules/bootstrap/scss/tooltip";
 //@import "../node_modules/bootstrap/scss/popover";
 //@import "../node_modules/bootstrap/scss/carousel";
 //@import "../node_modules/bootstrap/scss/spinners";
