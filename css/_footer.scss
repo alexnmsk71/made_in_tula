@@ -56,13 +56,12 @@
 
     &__logo {
         display: inline-block;
-        line-height: 1.02;
-        font-size: 29px;
-        font-weight: 900;
-        color: transparent !important;
-        background-clip: text;
-        background-image: linear-gradient(110deg, #2B255C, #8C1D82 25%, #E73331 50%, #F59C00 100%);
         margin-bottom: 22px;
+        width: 200px;
+
+        img {
+            max-width: 100%;
+        }
     }
 
     &__header {
@@ -118,4 +117,30 @@
         }
     }
 
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .footer-line {
+        height: 49px;
+
+        &::after {
+            background-size: auto 36px;
+        }
+    }
+
+    .footer {
+        &__row {
+            width: 100%;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__bottom {
+            margin-top: 30px;
+        }
+
+        &__logo {
+            width: 250px;
+        }
+    }
 }

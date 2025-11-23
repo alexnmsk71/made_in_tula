@@ -13,26 +13,29 @@
 <header class="header mb-3">
     <div class="container">
         <div class="header-menu">
-            <a href="/" class="header-menu__logo"><img src="images/logo.svg"></a>
+            <a href="/" class="header-menu__logo"><img class="d-none d-xl-block" src="images/logo.svg"><img
+                    class="d-block d-xl-none" src="images/logo2.svg"></a>
 
+            <div class="d-block d-xl-none flex-grow-1"></div>
             <div class="header-menu__drop" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
                  aria-controls="offcanvasMenu" id="offcanvasMenuBtn"></div>
-            <div class="input-group header-menu__search">
-                <input type="text" class="form-control" placeholder="Найти то, что сделано в Туле">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon1"></button>
-            </div>
-            <div class="header-menu__links">
+            <div class="header-menu__nav">
+                <div class="input-group header-menu__search me-0 me-xl-7">
+                    <input type="text" class="form-control" placeholder="Найти то, что сделано в Туле">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"></button>
+                </div>
                 <a href="#">О проекте</a>
                 <a href="#">Бренды</a>
                 <a href="#">Новости</a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#formModal">Стать участником</a>
+                <a href="#" class="store ms-0 ms-xl-3">Универмаг тульских брендов</a>
             </div>
-            <a href="#" class="store">Универмаг тульских брендов</a>
+            <div class="header-menu__burger"></div>
         </div>
     </div>
 </header>
 
-<div class="container py-7">
+<div class="container py-0 py-xl-7">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
             <li class="breadcrumb__item"><a href="/">Главная</a></li>
@@ -42,29 +45,37 @@
     </nav>
 </div>
 
-<section class="pt-4 pb-15">
+<section class="pt-4 pb-14 pb-xl-15">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3 pe-13">
-                <div class="categories-list">
-                    <a href="#">Бакалея</a>
-                    <a href="#">Бытовая химия</a>
-                    <a href="#">Овощи и фрукты</a>
-                    <a href="#">Молоко, яйцо и сыр</a>
-                    <a href="#">Красота и здоровье</a>
-                    <a href="#">Морозилка</a>
-                    <a href="#">Сад и огород</a>
-                    <a href="#">Вода и напитки</a>
-                    <a href="#">Тульские сладости</a>
-                    <a href="#">Одежда и аксессуары</a>
-                    <a href="#">Технологии и инновации</a>
-                    <a href="#">Активный отдых и туризм</a>
-                    <a href="#">Сувениры</a>
-                    <a href="#">Товары для животных</a>
-                    <a href="#">Товары для детей</a>
-                    <a href="#">Уютно дома</a>
+            <div class="col-xl-3 pe-xl-13">
+                <div class="dropdown categories-dropdown">
+                    <button class="btn btn-nc-fantasy filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Бытовая химия
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Бакалея</a></li>
+                        <li><a class="dropdown-item" href="#">Бытовая химия</a></li>
+                        <li><a class="dropdown-item" href="#">Овощи и фрукты</a></li>
+                        <li><a class="dropdown-item" href="#">Молоко, яйцо и сыр</a></li>
+                        <li><a class="dropdown-item" href="#">Красота и здоровье</a></li>
+                        <li><a class="dropdown-item" href="#">Морозилка</a></li>
+                        <li><a class="dropdown-item" href="#">Сад и огород</a></li>
+                        <li><a class="dropdown-item" href="#">Вода и напитки</a></li>
+                        <li><a class="dropdown-item" href="#">Тульские сладости</a></li>
+                        <li><a class="dropdown-item" href="#">Одежда и аксессуары</a></li>
+                        <li><a class="dropdown-item" href="#">Технологии и инновации</a></li>
+                        <li><a class="dropdown-item" href="#">Активный отдых и туризм</a></li>
+                        <li><a class="dropdown-item" href="#">Сувениры</a></li>
+                        <li><a class="dropdown-item" href="#">Товары для животных</a></li>
+                        <li><a class="dropdown-item" href="#">Товары для детей</a></li>
+                        <li><a class="dropdown-item" href="#">Уютно дома</a></li>
+                    </ul>
                 </div>
-                <a href="#" class="btn btn-nc-ribbon btn-ico w-100 mt-3"><img src="images/pdf_ico.svg"><span>Скачать список<br>участников (PDF)</span></a>
+<!--                <div class="categories-list">
+
+                </div>-->
+                <a href="#" class="btn btn-nc-ribbon btn-ico w-100 mt-3 d-none d-xl-inline-flex"><img src="images/pdf_ico.svg"><span>Скачать список<br>участников (PDF)</span></a>
             </div>
             <div class="col-xl-9">
                 <div class="brand-list">
@@ -232,6 +243,10 @@
 
 <div class="offcanvas offcanvas-start left-menu" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-body">
+        <div class="left-menu__header">
+            <span>Каталог товаров</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
         <div class="categories-list">
             <a href="#">Бакалея</a>
             <a href="#">Бытовая химия</a>
@@ -594,6 +609,7 @@
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="plugins/swiper/swiper-bundle.min.js"></script>
+<script src="plugins/fancybox/fancybox.umd.js"></script>
 <script src="js/inputmask.min.js"></script>
 <script src="js/main.js"></script>
 

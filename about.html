@@ -12,26 +12,27 @@
 <header class="header mb-3">
     <div class="container">
         <div class="header-menu">
-            <a href="/" class="header-menu__logo"><img src="images/logo.svg"></a>
-
+            <a href="/" class="header-menu__logo"><img class="d-none d-xl-block" src="images/logo.svg"><img class="d-block d-xl-none" src="images/logo2.svg"></a>
+            <div class="d-block d-xl-none flex-grow-1"></div>
             <div class="header-menu__drop" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
                  aria-controls="offcanvasMenu" id="offcanvasMenuBtn"></div>
-            <div class="input-group header-menu__search">
-                <input type="text" class="form-control" placeholder="Найти то, что сделано в Туле">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon1"></button>
-            </div>
-            <div class="header-menu__links">
+            <div class="header-menu__nav">
+                <div class="input-group header-menu__search me-0 me-xl-7">
+                    <input type="text" class="form-control" placeholder="Найти то, что сделано в Туле">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"></button>
+                </div>
                 <a href="#">О проекте</a>
                 <a href="#">Бренды</a>
                 <a href="#">Новости</a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#formModal">Стать участником</a>
+                <a href="#" class="store ms-0 ms-xl-3">Универмаг тульских брендов</a>
             </div>
-            <a href="#" class="store">Универмаг тульских брендов</a>
+            <div class="header-menu__burger"></div>
         </div>
     </div>
 </header>
 
-<div class="container py-7">
+<div class="container py-0 py-xl-7">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
             <li class="breadcrumb__item"><a href="/">Главная</a></li>
@@ -40,11 +41,11 @@
     </nav>
 </div>
 
-<section class="pt-4 pb-15">
+<section class="pt-4 pb-14 pb-xl-15">
     <div class="container">
         <h1 class="h2 text-dark decorated mb-3">О проекте «Сделано в Тульской области»</h1>
 
-        <div class="mb-8">
+        <div class="mb-3 mb-xl-8">
             <p>По поручению Губернатора Дмитрия Вячеславовича Миляева продвижению товаров местных производителей уделяется особое внимание.<br>
                 С 2020 года в регионе реализуется проект «Сделано в Тульской области», направленный на создание благоприятных условий для развития и популяризации тульских брендов.
             </p>
@@ -54,34 +55,26 @@
             <p>Продукция участников проекта проходит комиссионный отбор, который подтверждает безопасность товара.</p>
         </div>
 
-        <div class="row g-10">
-            <div class="col-xl-3">
-                <div class="advantage__item">
-                    <img class="advantage__img" src="images/advantages/adv1.png" alt="">
+        <div class="row-scroll advantage__row">
+            <div class="advantage__item">
+                <img class="advantage__img" src="images/advantages/adv1.png" alt="">
 
-                    <div class="advantage__title">Размещение продукции на брендированных полках в крупнейших торговых сетях</div>
-                </div>
+                <div class="advantage__title">Размещение продукции на брендированных полках в крупнейших торговых сетях</div>
             </div>
-            <div class="col-xl-3">
-                <div class="advantage__item">
-                    <img class="advantage__img" src="images/advantages/adv2.png" alt="">
+            <div class="advantage__item">
+                <img class="advantage__img" src="images/advantages/adv2.png" alt="">
 
-                    <div class="advantage__title">Участие в выставках, ярмарках, форумах на безвозмездной основе</div>
-                </div>
+                <div class="advantage__title">Участие в выставках, ярмарках, форумах на безвозмездной основе</div>
             </div>
-            <div class="col-xl-3">
-                <div class="advantage__item">
-                    <img class="advantage__img" src="images/advantages/adv3.png" alt="">
+            <div class="advantage__item">
+                <img class="advantage__img" src="images/advantages/adv3.png" alt="">
 
-                    <div class="advantage__title">Рекламно-информационная поддержка</div>
-                </div>
+                <div class="advantage__title">Рекламно-информационная поддержка</div>
             </div>
-            <div class="col-xl-3">
-                <div class="advantage__item">
-                    <img class="advantage__img" src="images/advantages/adv4.png" alt="">
+            <div class="advantage__item">
+                <img class="advantage__img" src="images/advantages/adv4.png" alt="">
 
-                    <div class="advantage__title">Право пользования знаком «Сделано в Тульской области»</div>
-                </div>
+                <div class="advantage__title">Право пользования знаком «Сделано в Тульской области»</div>
             </div>
         </div>
     </div>
@@ -134,6 +127,10 @@
 
 <div class="offcanvas offcanvas-start left-menu" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-body">
+        <div class="left-menu__header">
+            <span>Каталог товаров</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
         <div class="categories-list">
             <a href="#">Бакалея</a>
             <a href="#">Бытовая химия</a>
@@ -249,29 +246,25 @@
                                 </div>
                                 <div class="col-12 form-agreements">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_privacy_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_privacy_agr" required>
                                         <label class="form-check-label" for="ul_privacy_agr">
                                             Настоящим выражаю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности, пользовательским соглашением
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_service_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_service_agr" required>
                                         <label class="form-check-label" for="ul_service_agr">
                                             Заявитель ознакомлен с условиями предоставления услуги и согласен со всеми правами и обязанностями, описанными в порядке предоставления услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_condition_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_condition_agr" required>
                                         <label class="form-check-label" for="ul_condition_agr">
                                             Настоящим подтверждаю, что соответствую всем требованиям, необходимым для получения услуги, описанным в разделе порядка о предоставлении услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_adv_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_adv_agr" required>
                                         <label class="form-check-label" for="ul_adv_agr">
                                             Настоящим выражаю согласие на получение рекламных рассылок
                                         </label>
@@ -344,29 +337,25 @@
                                 </div>
                                 <div class="col-12 form-agreements">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_privacy_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_privacy_agr" required>
                                         <label class="form-check-label" for="ip_privacy_agr">
                                             Настоящим выражаю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности, пользовательским соглашением
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_service_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_service_agr" required>
                                         <label class="form-check-label" for="ip_service_agr">
                                             Заявитель ознакомлен с условиями предоставления услуги и согласен со всеми правами и обязанностями, описанными в порядке предоставления услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_condition_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_condition_agr" required>
                                         <label class="form-check-label" for="ip_condition_agr">
                                             Настоящим подтверждаю, что соответствую всем требованиям, необходимым для получения услуги, описанным в разделе порядка о предоставлении услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_adv_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_adv_agr" required>
                                         <label class="form-check-label" for="ip_adv_agr">
                                             Настоящим выражаю согласие на получение рекламных рассылок
                                         </label>
@@ -437,15 +426,12 @@
                                     <div class="field-set mb-7">
                                         <div class="file-loader">
                                             <div class="file-loader__container js-file-loader-container">
-                                                <button class="btn btn-nc-ribbon js-file-loader-btn"
-                                                        type="button">Загрузите файл
-                                                </button>
+                                                <button class="btn btn-nc-ribbon js-file-loader-btn" type="button">Загрузите файл</button>
                                                 <div class="file-loader__description">
                                                     <strong>Либо перетащите сюда</strong>
                                                     Файл с расширением (pdf) и размером, не превышающим 1 МБ.
                                                 </div>
-                                                <input type="file" class="file-loader__input js-file-loader-input"
-                                                       accept=".pdf">
+                                                <input type="file" class="file-loader__input js-file-loader-input" accept=".pdf">
                                             </div>
                                             <div class="file-loader__info text-center js-file-loader-info"></div>
                                         </div>
@@ -453,29 +439,25 @@
                                 </div>
                                 <div class="col-12 form-agreements">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_privacy_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_privacy_agr" required>
                                         <label class="form-check-label" for="sz_privacy_agr">
                                             Настоящим выражаю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности, пользовательским соглашением
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_service_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_service_agr" required>
                                         <label class="form-check-label" for="sz_service_agr">
                                             Заявитель ознакомлен с условиями предоставления услуги и согласен со всеми правами и обязанностями, описанными в порядке предоставления услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_condition_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_condition_agr" required>
                                         <label class="form-check-label" for="sz_condition_agr">
                                             Настоящим подтверждаю, что соответствую всем требованиям, необходимым для получения услуги, описанным в разделе порядка о предоставлении услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_adv_agr"
-                                               required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_adv_agr" required>
                                         <label class="form-check-label" for="sz_adv_agr">
                                             Настоящим выражаю согласие на получение рекламных рассылок
                                         </label>
@@ -496,8 +478,10 @@
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="plugins/swiper/swiper-bundle.min.js"></script>
+<script src="plugins/fancybox/fancybox.umd.js"></script>
 <script src="js/inputmask.min.js"></script>
 <script src="js/main.js"></script>
+
 
 </body>
 </html>

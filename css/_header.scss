@@ -25,6 +25,7 @@
     .btn {
         border-radius: 28px;
     }
+
 }
 
 .header-menu {
@@ -73,11 +74,12 @@
 
     }
 
-    &__links {
+    &__nav {
         flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.3s ease-in-out;
 
         & > a {
             display: flex;
@@ -109,6 +111,113 @@
         &:hover {
             background-color: $nc-color-fantasy;
             color: $nc-color-ribbon;
+        }
+    }
+
+    &__burger {
+        display: none;
+    }
+
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .header {
+        overflow: visible;
+
+        &::before, &::after {
+            display: none;
+        }
+    }
+
+    .header-menu {
+        height: 80px;
+        position: relative;
+
+        &__nav {
+            position: absolute;
+            left: -20px;
+            right: -20px;
+            top: calc(100% - 2px);
+            border-radius: 0 0 45px 45px;
+            padding: 22px 20px 44px 20px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            background: #fff;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-40px);
+            transition: 0.3s ease-in-out;
+
+            & > a:hover {
+                background: transparent;
+            }
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+        &__burger {
+            display: block;
+            width: 45px;
+            height: 45px;
+            border-radius: 50px;
+            background: $nc-color-linen url("data:image/svg+xml,%3Csvg width='21' height='15' viewBox='0 0 21 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.803516' y1='0.803906' x2='19.2844' y2='0.803906' stroke='black' stroke-width='1.60703' stroke-linecap='round'/%3E%3Cline x1='0.803516' y1='7.23164' x2='19.2844' y2='7.23164' stroke='black' stroke-width='1.60703' stroke-linecap='round'/%3E%3Cline x1='0.803516' y1='13.6604' x2='19.2844' y2='13.6604' stroke='black' stroke-width='1.60703' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+
+            &.active {
+                background: transparent url(../images/close.svg) no-repeat center / 16px 16px;
+            }
+        }
+
+        &__drop {
+            height: 45px;
+            width: auto;
+            min-width: 0;
+            border: none;
+            border-radius: 20px;
+            padding: 0 15px;
+            background: $nc-color-linen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+
+            &::before {
+                display: block;
+                content: "Товары"
+            }
+
+            &.opened {
+                background-image: none;
+
+                &::before {
+                    content: "Закрыть"
+                }
+            }
+        }
+
+        &__logo {
+            z-index: 2;
+
+            img {
+                height: 45px;
+            }
+        }
+
+        &__search {
+            min-height: 60px;
+            max-width: none;
+            margin-bottom: 20px;
+        }
+
+        a.store {
+            margin-top: 20px;
         }
     }
 

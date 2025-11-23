@@ -1,3 +1,12 @@
+.form-control::placeholder {
+    transition: 0.3s;
+    opacity: 0.4;
+}
+
+.form-control:hover::placeholder {
+    opacity: 1;
+}
+
 .field-set {
     background: rgba(255, 255, 255, 0.25);
     border-radius: 25px;
@@ -40,6 +49,7 @@ label {
     &__buttons {
         display: flex;
         gap: 10px;
+        padding-top: 7px;
 
         .btn {
             min-width: 200px;
@@ -103,8 +113,48 @@ label {
     }
 }
 
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .request-form {
 
+        &__buttons {
+            padding-top: 17px;
+            flex-direction: column;
+        }
 
+        .form-check {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 0;
+
+            .form-check-input {
+                margin-left: 0;
+                min-width: 27px;
+            }
+
+            .form-check-label {
+                padding-left: 13px;
+                width: calc(100% - 27px);
+            }
+
+            .error-message {
+                width: 100%;
+                padding-left: 40px;
+            }
+        }
+
+    }
+
+    .file-loader {
+        &__container {
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+            text-align: center;
+            padding: 20px 15px;
+        }
+    }
+}
 
 
 

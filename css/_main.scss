@@ -1,100 +1,9 @@
-$m-slide-width: 1426px;
-$m-slide-gap: 20px;
-
-.slider-wrapper {
-    width: 100%;
-    overflow: hidden;
-}
-
-.main-slider {
-    width: ($m-slide-width + $m-slide-gap)*3;
-    transform: translateX(calc(-50% + 50vw - 8px));
-
-    &__item {
-        border-radius: 75px;
-        overflow: hidden;
-        height: 650px;
-        width: 100%;
-        max-width: calc(100vw - 20px);
-        background: transparent no-repeat center / cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 88px;
-        margin: 0 auto;
-    }
-
-    &__content {
-        color: #fff;
-        max-width: 430px;
-
-        .btn {
-            width: 212px;
-        }
-    }
-
-    &__title {
-        font-weight: bold;
-        font-size: 60px;
-        line-height: 1.02;
-    }
-
-}
-
-.thumb-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.ms-thumbs {
-    display: flex;
-    justify-content: center;
-
-    &__content {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: $nc-color-fantasy no-repeat center / contain;
-        overflow: hidden;
-    }
-    .swiper-wrapper {
-        display: flex;
-        justify-content: center;
-        width: auto !important;
-    }
-    .swiper-slide {
-        width: auto !important;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-    }
-    .swiper-slide-thumb-active > * {
-        width: 56px;
-        height: 56px;
-        border: 2px solid $nc-color-ribbon;
-    }
-}
-
-$p-slide-width: 920px;
-$p-slide-gap: 10px;
-
-.promo-slider {
-    width: ($p-slide-width + $p-slide-gap)*3;
-    transform: translateX(calc(-50% + 50vw - 5px));
-
-    &__item {
-        height: 491px;
-        width: 100%;
-        background: transparent no-repeat center / cover;
-    }
-
-}
-
-
-
-
-
 .advantage {
+    &__row {
+        --row-scroll-column-count: 4;
+        --row-scroll-gap: 36px;
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -109,10 +18,11 @@ $p-slide-gap: 10px;
     &__title {
         margin-top: 12px;
         opacity: 0.6;
+        padding: 0 15px;
     }
 }
 
-.join-section {
+.sec-join {
     $content-width: 670px;
     overflow: hidden;
 
@@ -146,7 +56,7 @@ $p-slide-gap: 10px;
     }
 }
 
-.promo-section {
+.sec-promo {
     .slider-wrapper {
         position: relative;
         &::before {
@@ -239,3 +149,80 @@ $p-slide-gap: 10px;
     }
 }
 
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .advantage {
+        &__row {
+            $item_gap: 15px;
+
+            & > * {
+                width: 285px;
+            }
+        }
+    }
+
+    .sec-join {
+        .container::before {
+            display: none
+        }
+
+        &__content {
+            width: auto;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .sec-intro {
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .sec-partners {
+        &::before {
+            display: none;
+        }
+
+        &__subtitle {
+            width: 100%;
+            margin-bottom: 146px;
+        }
+
+        &__info {
+            padding: 30px 20px 90px 20px;
+            border-radius: 35px;
+            margin-left: calc(-0.5 * var(--bs-gutter-x));
+            margin-right: calc(-0.5 * var(--bs-gutter-x));
+        }
+
+        &__conditions {
+            position: relative;
+
+            &::before {
+                display: block;
+                position: absolute;
+                content: "";
+                width: 448px;
+                height: 297px;
+                top: -190px;
+                left: calc(50% + 30px);
+                transform: translateX(-50%);
+                z-index: -1;
+                background: transparent url(../images/partners_bg_m.png) no-repeat center;
+            }
+
+            li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+
+                &::before {
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+}

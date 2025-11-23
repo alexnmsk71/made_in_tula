@@ -5,6 +5,7 @@
     padding: 30px 0;
     transition: 0.3s;
     position: relative;
+    height: 100%;
 
     &:hover {
         background: #F0E6D0;
@@ -21,14 +22,62 @@
         text-align: center;
         text-decoration: none !important;
         color: #000 !important;
+        line-height: 1.1;
     }
+}
+
+.categories-list {
+    a {
+        display: flex;
+        align-items: center;
+        height: 56px;
+        border-radius: 22px;
+        transition: 0.3s;
+        color: #000;
+        text-decoration: none;
+        padding: 0 20px;
+
+        &:hover {
+            background: #fff;
+        }
+    }
+}
+
+.categories-dropdown {
+    width: auto;
+
+    & > .btn {
+        background: #fff !important;
+    }
+
+    .dropdown-menu {
+        a {
+            display: flex;
+            align-items: center;
+            height: 56px;
+            border-radius: 22px;
+            transition: 0.3s;
+            color: #000;
+            text-decoration: none;
+            padding: 0 20px;
+
+            &:hover {
+                background: #fff;
+            }
+        }
+    }
+}
+
+.main-categories {
+    --row-scroll-column-count: 4;
+    --row-scroll-gap: 10px;
 }
 
 .brand-card {
     position: relative;
     display: block;
 
-    &__image{
+    &__image {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -76,24 +125,15 @@
     }
 }
 
-.categories-list {
-    a {
-        display: flex;
-        align-items: center;
-        height: 56px;
-        border-radius: 22px;
-        transition: 0.3s;
-        color: #000;
-        text-decoration: none;
-        padding: 0 20px;
-
-        &:hover {
-            background: #fff;
-        }
-    }
-}
-
 .brand-detail {
+    display: grid;
+    grid-template-columns: auto 320px;
+    gap: 10px 20px;
+
+    &__right {
+        grid-row: span 2;
+    }
+
     &__img {
         position: relative;
         height: 435px;
@@ -140,7 +180,6 @@
         margin-bottom: 10px;
     }
 
-
     &__date-list {
         background: $nc-color-fantasy;
         border-radius: 35px;
@@ -163,5 +202,127 @@
             margin-bottom: 5px;
             line-height: 1;
         }
+    }
+
+    &__products {
+        --row-scroll-column-count: 3;
+        --row-scroll-gap: 10px;
+
+        margin-bottom: 25px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &-image {
+            border-radius: 35px;
+            background: $nc-color-fantasy;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            aspect-ratio: 297 / 317;
+        }
+
+        &-name {
+            font-size: 18px;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .category-card {
+        border-radius: 28px;
+        padding: 15px 3px;
+        &__title {
+            margin-top: 2px;
+            font-size: 14px;
+        }
+    }
+
+    .categories-list {
+        a {
+            padding: 0;
+        }
+    }
+
+    .categories-dropdown {
+        margin-bottom: 30px;
+
+        .dropdown-menu {
+            --bs-dropdown-bg: #fff;
+        }
+    }
+
+    .main-categories {
+        & > * {
+            width: 305px;
+        }
+    }
+
+    .brand-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &__right {
+            margin-bottom: 60px;
+        }
+
+        &__img {
+            height: 250px;
+            border-radius: 0;
+            margin-bottom: 30px;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        &__img &__logo {
+            top: 10px;
+            left: 10px;
+            width: 148px;
+            height: 80px;
+        }
+
+        &__logo {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            padding: 5px;
+            margin-bottom: 30px;
+        }
+
+        &__products {
+            & > * {
+                width: 296px;
+            }
+        }
+
+        &__date {
+            b {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md) + 1) {
+    .categories-dropdown {
+        [data-bs-toggle="dropdown"] {
+            display: none;
+        }
+
+        .dropdown-menu {
+            display: block !important;
+            position: static !important;
+            padding: 0;
+            margin: 0 !important;
+            transform: none !important;
+            transition: none;
+        }
+
     }
 }

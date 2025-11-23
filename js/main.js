@@ -9,10 +9,45 @@ $$.sliders = function () {
         centerInsufficientSlides: true,
     });
 
+    // Переменная для слайдера отзывов
+    let reviewSwiper = null;
+
+    function initReviewSlider() {
+        const isDesktop = window.innerWidth >= 480;
+        const sliderElement = document.querySelector('.js-review-slider');
+
+        if (isDesktop && !reviewSwiper && sliderElement) {
+            // Инициализируем слайдер только на десктопе
+            reviewSwiper = new Swiper('.js-review-slider', {
+                effect: 'slide',
+                slidesPerView: 3,
+                spaceBetween: 16,
+                loop: true,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            });
+        } else if (!isDesktop && reviewSwiper) {
+            // Уничтожаем слайдер на мобильных
+            reviewSwiper.destroy(true, true);
+            reviewSwiper = null;
+        }
+    }
+
+    // Инициализация слайдера отзывов при загрузке
+    initReviewSlider();
+
+    // Обновление при изменении размера
+    window.addEventListener('resize', function() {
+        initReviewSlider();
+    });
+
     new Swiper('.js-main-slider', {
         enabled: true,
         effect: 'slide',
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 16,
         loop: true,
         autoplay: {
@@ -24,6 +59,11 @@ $$.sliders = function () {
         centeredSlides: true,
         watchSlidesProgress: true,
         slideToClickedSlide: true,
+        breakpoints: {
+            480: {
+                slidesPerView: 3
+            }
+        }
     });
 
     new Swiper('.js-promo-slider', {
@@ -39,10 +79,10 @@ $$.sliders = function () {
         },
     });
 
-    new Swiper('.js-review-slider', {
-        enabled: true,
+    /*new Swiper('.js-review-slider', {
+        enabled: false,
         effect: 'slide',
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 16,
         loop: true,
         centeredSlides: true,
@@ -50,7 +90,15 @@ $$.sliders = function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         },
-    });
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            480: {
+                enabled: true,
+                slidesPerView: 3
+            }
+        }
+    });*/
 };
 
 $$.menu = function () {
@@ -254,10 +302,78 @@ $$.validator = function (form) {
     this.init();
 };
 
+$$.burger = function (burgerElement) {
+    const burger = burgerElement;
+    const nav = document.querySelector('.header-menu__nav');
+    const offcanvasMenu = document.getElementById('offcanvasMenu');
+
+    if (!burger || !nav) return;
+
+    // Клик по бургеру
+    burger.addEventListener('click', toggle);
+
+    // Клик по ссылкам в меню
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', close);
+    });
+
+    // Клик вне области меню
+    document.addEventListener('click', handleOutsideClick);
+
+    // Ресайз окна
+    window.addEventListener('resize', handleResize);
+
+    function toggle() {
+        if (burger.classList.contains('active')) {
+            close();
+        } else {
+            open();
+        }
+    }
+
+    function open() {
+        burger.classList.add('active');
+        nav.classList.add('active');
+        document.body.classList.add('menu-open');
+        closeOffcanvas();
+    }
+
+    function close() {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+
+    function handleOutsideClick(event) {
+        if (!event.target.closest('.header-menu__nav') && !event.target.closest('.header-menu__burger') &&
+            burger.classList.contains('active')) {
+            close();
+        }
+    }
+
+    function handleResize() {
+        if (window.innerWidth > 768 && burger.classList.contains('active')) {
+            close();
+        }
+    }
+
+    function closeOffcanvas() {
+        if (offcanvasMenu) {
+            const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasMenu);
+            if (bsOffcanvas) {
+                bsOffcanvas.hide();
+            }
+        }
+    }
+};
+
 window.addEventListener("DOMContentLoaded", function () {
     $$.menu();
     $$.sliders();
     $$.mask();
+
+    $$.burger(document.querySelector('.header-menu__burger'));
 
     document.querySelectorAll('.file-loader').forEach(function (el) {
         $$.fileLoader(el);

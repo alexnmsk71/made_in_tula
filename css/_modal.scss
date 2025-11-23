@@ -14,3 +14,33 @@
     background: #FAEFDB  url('../images/close.svg') no-repeat center / auto;
     padding: 0 !important;
 }
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .modal {
+        --bs-modal-border-radius: 35px;
+        --bs-modal-padding: 20px;
+        --bs-modal-header-padding: 16px 20px;
+
+        .btn-close {
+            position: absolute;
+            background: #E4D5BB;
+            border-radius: 25px;
+            height: 8px;
+            width: 62px;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .modal-header {
+        padding-bottom: 16px;
+        padding-top: 60px;
+        position: relative;
+
+        h1, .h1 {
+            font-size: 28px;
+        }
+    }
+}
+

@@ -13,26 +13,29 @@
 <header class="header mb-3">
     <div class="container">
         <div class="header-menu">
-            <a href="/" class="header-menu__logo"><img src="images/logo.svg"></a>
+            <a href="/" class="header-menu__logo"><img class="d-none d-xl-block" src="images/logo.svg"><img
+                    class="d-block d-xl-none" src="images/logo2.svg"></a>
 
+            <div class="d-block d-xl-none flex-grow-1"></div>
             <div class="header-menu__drop" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
                  aria-controls="offcanvasMenu" id="offcanvasMenuBtn"></div>
-            <div class="input-group header-menu__search">
-                <input type="text" class="form-control" placeholder="Найти то, что сделано в Туле">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon1"></button>
-            </div>
-            <div class="header-menu__links">
+            <div class="header-menu__nav">
+                <div class="input-group header-menu__search me-0 me-xl-7">
+                    <input type="text" class="form-control" placeholder="Найти то, что сделано в Туле">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"></button>
+                </div>
                 <a href="#">О проекте</a>
                 <a href="#">Бренды</a>
                 <a href="#">Новости</a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#formModal">Стать участником</a>
+                <a href="#" class="store ms-0 ms-xl-3">Универмаг тульских брендов</a>
             </div>
-            <a href="#" class="store">Универмаг тульских брендов</a>
+            <div class="header-menu__burger"></div>
         </div>
     </div>
 </header>
 
-<div class="container py-7">
+<div class="container py-0 py-xl-7">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
             <li class="breadcrumb__item"><a href="/">Главная</a></li>
@@ -46,131 +49,147 @@
 <section class="pt-4 pb-15">
     <div class="container">
         <div class="brand-detail">
-            <div class="row g-7">
-                <div class="col-xl-9">
-                    <div class="brand-detail__img">
-                        <img src="images/brands/brand-element.jpg" alt="">
-                        <div class="brand-detail__logo">
-                            <img src="images/brands/brand1.png" alt="">
-                        </div>
-                    </div>
-                    <h1 class="text-dark">Щекиноазот</h1>
-                    <div class="brand-detail__description ">
-                        <p>Химическая компания «Щекиноазот» уже 70 лет успешно работает на рынке химического сырья и продукции.</p>
-                        <h2 class="mb-4 text-dark">Товары</h2>
-                        <div class="row g-6 mb-4">
-                            <div class="col-xl-4">
-                                <div class="d-flex flex-column g-6">
-                                    <div class="rounded-5 bg-nc-fantasy d-flex justify-content-center align-items-center p-7 mb-2" style="aspect-ratio: 297 / 317">
-                                        <img class="inner" src="images/brands/product1.png" alt="">
-                                    </div>
-                                    <div class="fs-7 px-3">
-                                        Чистящее средство САНИТАРНЫЙ 330 г для...
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="d-flex flex-column g-6">
-                                    <div class="rounded-5 bg-nc-fantasy d-flex justify-content-center align-items-center p-7 mb-2" style="aspect-ratio: 297 / 317">
-                                        <img class="inner" src="images/brands/product2.png" alt="">
-                                    </div>
-                                    <div class="fs-7 px-3">
-                                        Чистящее средство для унитаза ЩекиноАзот...
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="d-flex flex-column g-6">
-                                    <div class="rounded-5 bg-nc-fantasy d-flex justify-content-center align-items-center p-7 mb-2" style="aspect-ratio: 297 / 317">
-                                        <img class="inner" src="images/brands/product3.png" alt="">
-                                    </div>
-                                    <div class="fs-7 px-3">
-                                        ЩЕКИНОАЗОТ Средство от засоров КРУТ 1000 мл. 2 шт
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>В конце 60-х годов Щекинский химический комбинат стал инициатором экономического эксперимента, известного как «Щекинский метод», главный принцип которого: повышение производительности труда и результатов деятельности, персонала меньше – продукции больше.</p>
-                        <p>1967-1970 – первый этап эксперимента. Возглавил работу директор Щекинского химкомбината Петр Михайлович Шаров. По итогам первого этапа в 1971 году Щекинский химкомбинат награжден высшей государственной наградой СССР – орденом Ленина, несколько работников предприятия удостоены Государственных премий.</p>
-                        <p>1972 - за достижение наивысших результатов во Всесоюзном социалистическом соревновании Щекинский химический комбинат удостоен Почетного Юбилейного знака ЦК КПСС, Президиума Верховного Совета СССР, Совета Министров СССР, ВЦСПС. Указом Президиума Верховного Совета РСФСР Щекинскому ордена Ленина химическому комбинату присвоено имя 50-летия СССР.</p>
-                        <p>1971-1975 – второй этап экономического эксперимента, реализуется задача всестороннего повышения технического уровня производства. Реконструкция шла в условиях действующего производства. Мощность цехов и производств была превышена.</p>
-                        <p>В 1976 году за отличные показатели в работе, достигнутые химкомбинатом, его директору П.М.Шарову присвоено звание Героя Социалистического Труда.</p>
-                        <p>Успехи прошлого создали надежную основу для новых достижений предприятия.</p>
-                        <p>Сегодня «Щекиноазот» – современная, динамично развивающаяся компания, база для реализации достижений науки.</p>
-                        <p>Эффективные управленческие технологии, применяемые на предприятии, получили высокую оценку клиентов и партнеров.</p>
-                        <p>Компания – производитель востребованных продуктов промышленной химии и минеральных удобрений.</p>
-                    </div>
-                    <div class="content-links">
-                        <a href="#" class="site round dark">n.azot.ru</a>
-                        <a href="#" class="vk round dark"></a>
-                        <a href="#" class="tg round dark"></a>
-                        <a href="#" class="ok round dark"></a>
-                        <a href="#" class="share round dark"></a>
-                    </div>
-                    <div class="gallery">
-                        <h2 class="text-dark">Галерея</h2>
-                        <div class="row g-6">
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture1.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture2.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture3.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture4.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture4.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture5.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture5.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture6.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture6.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture1.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture2.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-xl-4">
-                                <a href="images/gallery/picture3.jpg" class="gallery__img image-container" data-fancybox="gallery">
-                                    <img src="images/gallery/picture3.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <a class="gallery__show-all" href="#">Показать все фото</a>
+            <div class="brand-detail__top">
+                <div class="brand-detail__img">
+                    <img src="images/brands/brand-element.jpg" alt="">
+
+                    <div class="brand-detail__logo">
+                        <img src="images/brands/brand1.png" alt="">
                     </div>
                 </div>
-                <div class="col-xl-3">
-                    <div class="brand-detail__date-list">
-                        <div class="brand-detail__date">
-                            <b>1955</b>
-                            Год основания
+                <h1 class="text-dark">Щекиноазот</h1>
+
+                <p>Химическая компания «Щекиноазот» уже 70 лет успешно работает на рынке химического сырья и продукции.</p>
+            </div>
+            <div class="brand-detail__right">
+                <div class="brand-detail__date-list">
+                    <div class="brand-detail__date">
+                        <b>1955</b>
+                        Год основания
+                    </div>
+                    <div class="brand-detail__date">
+                        <b>2022</b>
+                        Год, в котором примоединился к проекту
+                    </div>
+                </div>
+                <a href="#" class="store">Предоставлен в универмаге Тульских брендов</a>
+            </div>
+            <div class="brand-detail__main">
+
+                <h2 class="mb-4 text-dark">Товары</h2>
+
+                <div class="brand-detail__products row-scroll">
+                    <div class="brand-detail__products-item">
+                        <div class="brand-detail__products-image">
+                            <img class="inner" src="images/brands/product1.png" alt="">
                         </div>
-                        <div class="brand-detail__date">
-                            <b>2022</b>
-                            Год, в котором примоединился к проекту
+                        <div class="brand-detail__products-name">
+                            Чистящее средство САНИТАРНЫЙ 330 г для...
                         </div>
                     </div>
-                    <a href="#" class="store">Предоставлен в универмаге Тульских брендов</a>
+                    <div class="brand-detail__products-item">
+                        <div class="brand-detail__products-image">
+                            <img class="inner" src="images/brands/product2.png" alt="">
+                        </div>
+                        <div class="brand-detail__products-name">
+                            Чистящее средство для унитаза ЩекиноАзот...
+                        </div>
+                    </div>
+                    <div class="brand-detail__products-item">
+                        <div class="brand-detail__products-image">
+                            <img class="inner" src="images/brands/product3.png" alt="">
+                        </div>
+                        <div class="brand-detail__products-name">
+                            ЩЕКИНОАЗОТ Средство от засоров КРУТ 1000 мл. 2 шт
+                        </div>
+                    </div>
+                </div>
+                <div class="brand-detail__description">
+                    <p>В конце 60-х годов Щекинский химический комбинат стал инициатором экономического эксперимента, известного как «Щекинский метод», главный принцип которого: повышение производительности труда и результатов деятельности, персонала меньше – продукции больше.</p>
+
+                    <p>1967-1970 – первый этап эксперимента. Возглавил работу директор Щекинского химкомбината Петр Михайлович Шаров. По итогам первого этапа в 1971 году Щекинский химкомбинат награжден высшей государственной наградой СССР – орденом Ленина, несколько работников предприятия удостоены Государственных премий.</p>
+
+                    <p>1972 - за достижение наивысших результатов во Всесоюзном социалистическом соревновании Щекинский химический комбинат удостоен Почетного Юбилейного знака ЦК КПСС, Президиума Верховного Совета СССР, Совета Министров СССР, ВЦСПС. Указом Президиума Верховного Совета РСФСР Щекинскому ордена Ленина химическому комбинату присвоено имя 50-летия СССР.</p>
+
+                    <p>1971-1975 – второй этап экономического эксперимента, реализуется задача всестороннего повышения технического уровня производства. Реконструкция шла в условиях действующего производства. Мощность цехов и производств была превышена.</p>
+
+                    <p>В 1976 году за отличные показатели в работе, достигнутые химкомбинатом, его директору П.М.Шарову присвоено звание Героя Социалистического Труда.</p>
+
+                    <p>Успехи прошлого создали надежную основу для новых достижений предприятия.</p>
+
+                    <p>Сегодня «Щекиноазот» – современная, динамично развивающаяся компания, база для реализации достижений науки.</p>
+
+                    <p>Эффективные управленческие технологии, применяемые на предприятии, получили высокую оценку клиентов и партнеров.</p>
+
+                    <p>Компания – производитель востребованных продуктов промышленной химии и минеральных удобрений.</p>
+                </div>
+                <div class="content-links">
+                    <a href="#" class="site round dark">n.azot.ru</a>
+                    <a href="#" class="vk round dark"></a>
+                    <a href="#" class="tg round dark"></a>
+                    <a href="#" class="ok round dark"></a>
+                    <a href="#" class="share round dark"></a>
+                </div>
+                <div class="gallery">
+                    <h2 class="text-dark">Галерея</h2>
+
+                    <div class="row g-6">
+                        <div class="col-xl-4">
+                            <a href="images/gallery/picture1.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-xl-4">
+                            <a href="images/gallery/picture2.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-xl-4">
+                            <a href="images/gallery/picture3.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-4">
+                            <a href="images/gallery/picture4.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-4">
+                            <a href="images/gallery/picture5.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-4">
+                            <a href="images/gallery/picture6.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture6.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-4">
+                            <a href="images/gallery/picture1.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-4">
+                            <a href="images/gallery/picture2.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-4">
+                            <a href="images/gallery/picture3.jpg" class="gallery__img image-container"
+                               data-fancybox="gallery">
+                                <img src="images/gallery/picture3.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="gallery__show-all" href="#">Показать все фото</a>
                 </div>
             </div>
         </div>
@@ -199,7 +218,8 @@
                     <div class="footer__header">Предпринимателям</div>
                     <a class="footer__link" href="#">О проекте</a>
                     <a class="footer__link" href="#">Универмаг</a>
-                    <a class="footer__link" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Стать участником</a>
+                    <a class="footer__link" href="#" data-bs-toggle="modal"
+                       data-bs-target="#formModal">Стать участником</a>
                     <a class="footer__link" href="#">Контакты</a>
                 </div>
                 <div class="footer__column">
@@ -224,6 +244,10 @@
 
 <div class="offcanvas offcanvas-start left-menu" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-body">
+        <div class="left-menu__header">
+            <span>Каталог товаров</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
         <div class="categories-list">
             <a href="#">Бакалея</a>
             <a href="#">Бытовая химия</a>
@@ -339,25 +363,29 @@
                                 </div>
                                 <div class="col-12 form-agreements">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_privacy_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_privacy_agr"
+                                               required>
                                         <label class="form-check-label" for="ul_privacy_agr">
                                             Настоящим выражаю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности, пользовательским соглашением
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_service_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_service_agr"
+                                               required>
                                         <label class="form-check-label" for="ul_service_agr">
                                             Заявитель ознакомлен с условиями предоставления услуги и согласен со всеми правами и обязанностями, описанными в порядке предоставления услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_condition_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_condition_agr"
+                                               required>
                                         <label class="form-check-label" for="ul_condition_agr">
                                             Настоящим подтверждаю, что соответствую всем требованиям, необходимым для получения услуги, описанным в разделе порядка о предоставлении услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ul_adv_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ul_adv_agr"
+                                               required>
                                         <label class="form-check-label" for="ul_adv_agr">
                                             Настоящим выражаю согласие на получение рекламных рассылок
                                         </label>
@@ -430,25 +458,29 @@
                                 </div>
                                 <div class="col-12 form-agreements">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_privacy_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_privacy_agr"
+                                               required>
                                         <label class="form-check-label" for="ip_privacy_agr">
                                             Настоящим выражаю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности, пользовательским соглашением
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_service_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_service_agr"
+                                               required>
                                         <label class="form-check-label" for="ip_service_agr">
                                             Заявитель ознакомлен с условиями предоставления услуги и согласен со всеми правами и обязанностями, описанными в порядке предоставления услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_condition_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_condition_agr"
+                                               required>
                                         <label class="form-check-label" for="ip_condition_agr">
                                             Настоящим подтверждаю, что соответствую всем требованиям, необходимым для получения услуги, описанным в разделе порядка о предоставлении услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ip_adv_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="ip_adv_agr"
+                                               required>
                                         <label class="form-check-label" for="ip_adv_agr">
                                             Настоящим выражаю согласие на получение рекламных рассылок
                                         </label>
@@ -519,12 +551,15 @@
                                     <div class="field-set mb-7">
                                         <div class="file-loader">
                                             <div class="file-loader__container js-file-loader-container">
-                                                <button class="btn btn-nc-ribbon js-file-loader-btn" type="button">Загрузите файл</button>
+                                                <button class="btn btn-nc-ribbon js-file-loader-btn"
+                                                        type="button">Загрузите файл
+                                                </button>
                                                 <div class="file-loader__description">
                                                     <strong>Либо перетащите сюда</strong>
                                                     Файл с расширением (pdf) и размером, не превышающим 1 МБ.
                                                 </div>
-                                                <input type="file" class="file-loader__input js-file-loader-input" accept=".pdf">
+                                                <input type="file" class="file-loader__input js-file-loader-input"
+                                                       accept=".pdf">
                                             </div>
                                             <div class="file-loader__info text-center js-file-loader-info"></div>
                                         </div>
@@ -532,25 +567,29 @@
                                 </div>
                                 <div class="col-12 form-agreements">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_privacy_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_privacy_agr"
+                                               required>
                                         <label class="form-check-label" for="sz_privacy_agr">
                                             Настоящим выражаю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности, пользовательским соглашением
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_service_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_service_agr"
+                                               required>
                                         <label class="form-check-label" for="sz_service_agr">
                                             Заявитель ознакомлен с условиями предоставления услуги и согласен со всеми правами и обязанностями, описанными в порядке предоставления услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_condition_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_condition_agr"
+                                               required>
                                         <label class="form-check-label" for="sz_condition_agr">
                                             Настоящим подтверждаю, что соответствую всем требованиям, необходимым для получения услуги, описанным в разделе порядка о предоставлении услуги
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="sz_adv_agr" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="sz_adv_agr"
+                                               required>
                                         <label class="form-check-label" for="sz_adv_agr">
                                             Настоящим выражаю согласие на получение рекламных рассылок
                                         </label>

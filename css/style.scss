@@ -207,7 +207,7 @@ $input-group-addon-bg: $input-bg;
 
 $spacers: (
         0: 0,
-        1: $spacer * .25, //4px
+        1: $spacer * .25, //4px *
         2: $spacer * .5, //8px *
         3: $spacer, //16px *
         4: $spacer * 1.75, //28px *
@@ -300,6 +300,7 @@ $text-close-color: #99A5B0;*/
 @import "common";
 @import "header";
 @import "footer";
+@import "sliders";
 @import "main";
 @import "catalog";
 @import "reviews";
