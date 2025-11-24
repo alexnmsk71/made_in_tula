@@ -59,7 +59,7 @@
 .sec-promo {
     .slider-wrapper {
         position: relative;
-        &::before {
+        /*&::before {
             display: block;
             position: absolute;
             content: "";
@@ -81,7 +81,7 @@
             z-index: 100;
             transform: rotate(180deg);
             background: transparent url(../images/slider_bg.svg) no-repeat top center / 100%;
-        }
+        }*/
     }
 }
 
